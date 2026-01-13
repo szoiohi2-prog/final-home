@@ -2,24 +2,57 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>나의 홈페이지</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홍길동의 포트폴리오</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 커스텀 스타일링 */
+        body { font-family: 'Poppins', sans-serif; }
+        .navbar { backdrop-filter: blur(10px); background-color: rgba(255,255,255,0.8) !important; }
+        .hero-section {
+            /* 배경에 멋진 그라데이션 넣기 */
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 150px 0;
+            border-radius: 0 0 50% 50% / 40px; /* 하단을 둥글게 */
+        }
+        .hero-title { font-weight: 800; font-size: 3.5rem; }
+        .btn-custom { 
+            background: white; color: #764ba2; font-weight: 600; padding: 12px 30px; border-radius: 30px; transition: all 0.3s;
+        }
+        .btn-custom:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">MyHome</a>
-            <div class="navbar-nav">
-                <a class="nav-link active" href="index.html">홈</a>
-                <a class="nav-link" href="intro.html">자기소개</a>
-                <a class="nav-link" href="calc.html">계산기</a>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">MY PORTFOLIO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="about.html">ABOUT ME</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="calc.html">CALCULATOR</a></li>
+                </ul>
             </div>
         </div>
     </nav>
-    <div class="container mt-5 text-center">
-        <h1>환영합니다!</h1>
-        <p>과제 제출용 홈페이지입니다.</p>
-        <a href="intro.html" class="btn btn-primary">제 소개 보러가기</a>
-    </div>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <p class="lead mb-2">안녕하세요 👋</p>
+            <h1 class="hero-title mb-4">저는 [ OO대학교 OO학과 ]<br>[ 홍길동 ] 입니다.</h1>
+            <p class="mb-5 opacity-75">웹 개발자를 꿈꾸는 열정적인 학생의 포트폴리오입니다.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="about.html" class="btn btn-custom shadow">내 소개 자세히 보기</a>
+                <a href="calc.html" class="btn btn-outline-light rounded-pill px-4 py-2 fw-bold">계산기 프로젝트</a>
+            </div>
+        </div>
+    </header>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
